@@ -1,0 +1,28 @@
+{
+  "name": "patchwork",
+  "version": "1.0.0",
+  "description": "Web app based on the mobile Patchwork app",
+  "main": "index.js",
+  "scripts": {
+    "start": "bankai client.js -p 8080",
+    "start:open": "bankai client.js -p 8080 --open",
+    "build": "bankai build client.js dist/",
+    "lint": "standard --verbose | snazzy",
+    "test": "npm run lint"
+  },
+  "keywords": [
+    "patchwork",
+    "web"
+  ],
+  "author": "Luis Del Águila <luisdelaguila@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "choo": "^4.1.0",
+    "sheetify": "^6.0.1",
+    "xtend": "^4.0.1"
+  },
+  "devDependencies": {
+    "bankai": "^5.4.0",
+    "standard": "^8.6.0"
+  }
+}
