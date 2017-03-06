@@ -1,21 +1,25 @@
 'use strict'
 
 const html = require('choo/html')
-const css = require('sheetify')
-const prefix = css('../styles.css')
+const stylesMap = require('../styles-map')
 
 module.exports = (state, prev, send) => {
-  const rows = state.grid.rows
   return html`
     <div>
       <table>
-        ${rows.map(row => html`
+        ${state.grid.map((row, m) => html`
           <tr>
-            ${row.map(column => html `
-              <td>
-                <div class=${prefix}>${column.element}</div>
-              </td>
-            `)}
+            ${row.map((value, n) => {
+              const { element, styleID } = state.grid[m][n]
+
+              return html`
+                <td>
+                  <div class=${stylesMap[styleID]} onclick=${() => send('changeBorder', { m, n })}>
+                    ${element}
+                  </div>
+                </td>
+              `
+            })}
           </tr>
         `)}
       </table>

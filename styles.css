@@ -1,3 +1,32 @@
-:host {
-  border: 1px solid blue;
+table {
+  border: 1px solid black;
+}
+
+.box {
+  background-color: blue;
+  padding: 5px;
+}
+
+.box.empty {
+  background-color: transparent;
+}
+
+.box.full {
+  border-radius: 0;
+}
+
+.box.top-left {
+  border-top-left-radius: 50%; 
+}
+
+.box.top-right {
+  border-top-right-radius: 50%; 
+}
+
+.box.bottom-left {
+  border-bottom-left-radius: 50%; 
+}
+
+.box.bottom-right {
+  border-bottom-right-radius: 50%; 
 }
