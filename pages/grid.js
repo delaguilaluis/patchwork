@@ -6,7 +6,7 @@ const stylesMap = require('../styles-map')
 module.exports = (state, prev, send) => {
   return html`
     <div>
-      <table>
+      <table class="grid">
         ${state.grid.map((row, m) => html`
           <tr>
             ${row.map((value, n) => {
@@ -14,7 +14,7 @@ module.exports = (state, prev, send) => {
 
               return html`
                 <td>
-                  <div class=${stylesMap[styleID]} onclick=${() => send('changeBorder', { m, n })}>
+                  <div class="box ${stylesMap[styleID]}" onclick=${() => send('changeBorder', { m, n })}>
                     ${element}
                   </div>
                 </td>
@@ -23,6 +23,10 @@ module.exports = (state, prev, send) => {
           </tr>
         `)}
       </table>
+
+      <div class="footer">
+        <a href="https://twitter.com/delaguilaluis">@delaguilaluis</a>
+      </div>
     </div>
   `
 }
