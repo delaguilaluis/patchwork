@@ -3,9 +3,16 @@
   margin: 20px auto;
 }
 
+.color-picker {
+  margin: auto;
+}
+
 .box {
-  background-color: blue;
   padding: 25px;
+}
+
+.color-box {
+  padding: 15px;
 }
 
 .flat-border {
@@ -38,22 +45,26 @@
 }
 
 .flat-border.top-left {
-  border-bottom: 50px solid blue;
+  border-bottom-width: 50px;
+  border-bottom-style: solid;
   border-left: 50px solid transparent; 
 }
 
 .flat-border.top-right {
-  border-bottom: 50px solid blue;
+  border-bottom-width: 50px;
+  border-bottom-style: solid;
 	border-right: 50px solid transparent;
 }
 
 .flat-border.bottom-right {
-  border-top: 50px solid blue;
+  border-top-width: 50px;
+  border-top-style: solid;
 	border-right: 50px solid transparent;
 }
 
 .flat-border.bottom-left {
-  border-top: 50px solid blue;
+  border-top-width: 50px;
+  border-top-style: solid;
 	border-left: 50px solid transparent;
 }
 
