@@ -18,7 +18,7 @@ module.exports = (state, prev, send) => {
 
               return html`
                 <td>
-                  <div class="box ${stylesMap[styleID]}" onclick=${() => send('changeBorder', { m, n })}>
+                  <div class="${stylesMap[styleID]}" onclick=${() => send('changeBorder', { m, n })}>
                     ${element}
                   </div>
                 </td>
