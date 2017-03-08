@@ -8,7 +8,7 @@
   padding: 25px;
 }
 
-.pointed-border {
+.flat-border {
   background-color: transparent;
   padding: 0;
 }
@@ -37,24 +37,24 @@
   border-bottom-left-radius: 100%; 
 }
 
-.pointed-border.top-left {
-  border-top: 50px solid blue;
-	border-right: 50px solid transparent;
-}
-
-.pointed-border.top-right {
-  border-top: 50px solid blue;
-	border-left: 50px solid transparent;
-}
-
-.pointed-border.bottom-right {
+.flat-border.top-left {
   border-bottom: 50px solid blue;
   border-left: 50px solid transparent; 
 }
 
-.pointed-border.bottom-left {
+.flat-border.top-right {
   border-bottom: 50px solid blue;
 	border-right: 50px solid transparent;
+}
+
+.flat-border.bottom-right {
+  border-top: 50px solid blue;
+	border-right: 50px solid transparent;
+}
+
+.flat-border.bottom-left {
+  border-top: 50px solid blue;
+	border-left: 50px solid transparent;
 }
 
 .header {
