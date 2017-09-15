@@ -4,7 +4,10 @@ const html = require('choo/html')
 const styles = require('../catalogs/styles')
 const colors = require('../catalogs/colors')
 
-module.exports = (state, emit) => {
+var TITLE = 'Patchwork'
+
+module.exports = function view (state, emit) {
+  if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
   return html`
     <body>
       <div>

@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = [
   'box empty',
   'box full',

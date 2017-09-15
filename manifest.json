@@ -1,0 +1,14 @@
+{
+  "name": "Patchwork",
+  "short_name": "patchwork",
+  "description": "Draw with shapes",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "white",
+  "icons": [{
+    "src": "/assets/icon.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }]
+}

@@ -18,6 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "choo": "^6.0.0",
+    "choo-log": "^7.2.1",
+    "choo-service-worker": "^2.3.0",
     "css-wipe": "^4.2.2",
     "sheetify": "^6.0.1",
     "tachyons": "^4.6.2"

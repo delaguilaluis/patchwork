@@ -9,10 +9,17 @@ css('tachyons')
 css('./styles.css')
 
 const app = choo()
+app.use(require('choo-service-worker')())
+if (process.env.NODE_ENV !== 'production') {
+  app.use(require('choo-log')())
+}
 
 app.use(patchwork)
 app.route('/', require('./views/main'))
-app.mount('body')
+app.route('/*', require('./views/404'))
+
+if (!module.parent) app.mount('body')
+else module.exports = app
 
 function patchwork (state, emitter) {
   state.grid = makeGrid(8, 8)
