@@ -4,9 +4,9 @@
   "description": "Web app based on the mobile Patchwork app",
   "main": "index.js",
   "scripts": {
-    "start": "bankai index.js -p 3000",
-    "start:open": "bankai index.js -p 3000 --open",
-    "build": "bankai build index.js dist/",
+    "start": "bankai index.js -p 3000 -a favicon.ico",
+    "start:open": "bankai index.js -p 3000 -a favicon.ico --open",
+    "build": "bankai build index.js dist/ -a favicon.ico",
     "lint": "standard --verbose",
     "test": "npm run lint"
   },
