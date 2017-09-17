@@ -1,81 +1,58 @@
-.grid {
-  border: 3px solid black;
-  margin: 20px auto;
-}
-
-.color-picker {
-  margin: auto;
-}
-
 .box {
-  padding: 25px;
+  padding: 1.25rem;
 }
 
-.color-box {
-  padding: 15px;
+.round-top-left {
+  border-top-left-radius: 100%; 
 }
 
-.flat-border {
+.round-top-right {
+  border-top-right-radius: 100%; 
+}
+
+.round-bottom-right {
+  border-bottom-right-radius: 100%; 
+}
+
+.round-bottom-left {
+  border-bottom-left-radius: 100%; 
+}
+
+/* More specific to avoid collision with background-color */
+div.empty {
+  background-color: transparent;
+  border-radius: 0; 
+}
+
+div.corner {
   background-color: transparent;
   padding: 0;
 }
 
-.box.empty {
-  background-color: transparent;
-}
-
-.box.full {
-  border-radius: 0;
-}
-
-.box.top-left {
-  border-top-left-radius: 100%; 
-}
-
-.box.top-right {
-  border-top-right-radius: 100%; 
-}
-
-.box.bottom-right {
-  border-bottom-right-radius: 100%; 
-}
-
-.box.bottom-left {
-  border-bottom-left-radius: 100%; 
-}
-
-.flat-border.top-left {
-  border-bottom-width: 50px;
+.corner.flat-top-left {
+  border-bottom-width: 2.50rem;
   border-bottom-style: solid;
-  border-left: 50px solid transparent; 
+
+  border-left: 2.50rem solid transparent;
 }
 
-.flat-border.top-right {
-  border-bottom-width: 50px;
+.corner.flat-top-right {
+  border-bottom-width: 2.50rem;
   border-bottom-style: solid;
-	border-right: 50px solid transparent;
+
+  border-right: 2.50rem solid transparent;
 }
 
-.flat-border.bottom-right {
-  border-top-width: 50px;
+.corner.flat-bottom-right {
+  border-top-width: 2.50rem;
   border-top-style: solid;
-	border-right: 50px solid transparent;
+
+  border-right: 2.50rem solid transparent;
 }
 
-.flat-border.bottom-left {
-  border-top-width: 50px;
+.corner.flat-bottom-left {
+  border-top-width: 2.50rem;
   border-top-style: solid;
-	border-left: 50px solid transparent;
-}
 
-.header {
-  font-family: sans-serif;
-  font-size: 20px;
-  padding-top: 30px;
-  text-align: center;
-}
-
-.footer {
-  padding-top: 40px;
-  text-align: center;
+  border-left: 2.50rem solid transparent;
 }

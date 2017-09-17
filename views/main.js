@@ -10,12 +10,12 @@ module.exports = function view (state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
   return html`
     <body>
-      <div>
-        <div class="header">
-          <h2>Go ahead, click it!</h2>
-        </div>
+      <header class="center ma3">
+        <h2 class="tc f4 sans-serif">Go ahead, click it!</h2>
+      </header>
 
-        <table class="grid">
+      <div id="grid" class="ma3">
+        <table class="center ba bw1 b--black">
           ${state.grid.map((row, m) => html`
             <tr>
               ${row.map((value, n) => {
@@ -33,23 +33,25 @@ module.exports = function view (state, emit) {
             </tr>
           `)}
         </table>
+      </div>
 
-        <table class="color-picker">
+      <div id="color-picker" class="ma3">
+        <table class="center">
           <tr>
             ${colors.map((color, colorID) => {
               const border = colorID === state.colorPicker.selectionID ? 'ba bw1 b--gray' : ''
               return html`
                 <td>
-                  <div class="fl w-10 color-box bg-${color} ${border}" onclick=${changeColor(colorID)}></div>
+                  <div class="fl pa3 bg-${color} ${border}" onclick=${changeColor(colorID)}></div>
                 </td>
               `
             })}
           </tr>
         </table>
+      </div>
 
-        <div class="footer">
-          <iframe src="https://ghbtns.com/github-btn.html?user=delaguilaluis&repo=patchwork&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
-        </div>
+      <div class="tc ma4" id="footer">
+        <iframe src="https://ghbtns.com/github-btn.html?user=delaguilaluis&repo=patchwork&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
       </div>
     </body>
   `

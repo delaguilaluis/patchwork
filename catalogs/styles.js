@@ -1,12 +1,12 @@
 module.exports = [
   'box empty',
   'box full',
-  'box top-left',
-  'box top-right',
-  'box bottom-right',
-  'box bottom-left',
-  'flat-border top-left',
-  'flat-border top-right',
-  'flat-border bottom-right',
-  'flat-border bottom-left'
+  'box round-top-left',
+  'box round-top-right',
+  'box round-bottom-right',
+  'box round-bottom-left',
+  'corner flat-top-left',
+  'corner flat-top-right',
+  'corner flat-bottom-right',
+  'corner flat-bottom-left'
 ]
