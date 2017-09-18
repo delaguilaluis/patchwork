@@ -57,7 +57,7 @@ div.corner {
   border-left: 2.50rem solid transparent;
 }
 
-@media screen and (min-width: 30em) and (max-width: 60em) {
+@media screen and (min-width: 30em) {
   .box {
     padding: 1.5rem;
   }
@@ -88,39 +88,5 @@ div.corner {
     border-top-style: solid;
   
     border-left: 3rem solid transparent;
-  }
-}
-
-@media screen and (min-width: 60em) {
-  .box {
-    padding: 2rem;
-  }
-
-  .corner.flat-top-left {
-    border-bottom-width: 4rem;
-    border-bottom-style: solid;
-  
-    border-left: 4rem solid transparent;
-  }
-  
-  .corner.flat-top-right {
-    border-bottom-width: 4rem;
-    border-bottom-style: solid;
-  
-    border-right: 4rem solid transparent;
-  }
-  
-  .corner.flat-bottom-right {
-    border-top-width: 4rem;
-    border-top-style: solid;
-  
-    border-right: 4rem solid transparent;
-  }
-  
-  .corner.flat-bottom-left {
-    border-top-width: 4rem;
-    border-top-style: solid;
-  
-    border-left: 4rem solid transparent;
   }
 }
