@@ -1,11 +1,13 @@
 module.exports = [
+  'purple',
+  'pink',
   'red',
   'orange',
   'gold',
   'yellow',
-  'purple',
-  'pink',
   'green',
+  'blue',
   'navy',
-  'blue'
+  'black',
+  'white'
 ]

@@ -39,10 +39,10 @@ module.exports = function view (state, emit) {
         <table class="center">
           <tr>
             ${colors.map((color, colorID) => {
-              const border = colorID === state.colorPicker.selectionID ? 'ba bw1 b--gray' : ''
+              const border = colorID === state.colorPicker.selectionID ? 'ma1 bw1 b--silver' : 'b--black-30'
               return html`
                 <td>
-                  <div class="fl pa3 bg-${color} ${border}" onclick=${changeColor(colorID)}></div>
+                  <div class="fl pa3 bg-${color} ba ${border}" onclick=${changeColor(colorID)}></div>
                 </td>
               `
             })}
