@@ -3,6 +3,7 @@
 const choo = require('choo')
 const css = require('sheetify')
 const styles = require('./catalogs/styles')
+const lastColor = require('./catalogs/colors').length - 1
 
 css('css-wipe')
 css('tachyons')
@@ -24,6 +25,7 @@ else module.exports = app
 function patchwork (state, emitter) {
   state.grid = makeGrid(8, 8)
   state.colorPicker = { selectionID: 0 }
+  state.canvasColorPicker = { selectionID: lastColor }
 
   emitter.on('changeStyle', function ({ m, n, colorID }) {
     const stylesLength = Object.keys(styles).length
@@ -36,12 +38,19 @@ function patchwork (state, emitter) {
     }
 
     state.grid[m][n].colorID = state.colorPicker.selectionID
+    state.grid[m][n].canvasColorID = state.canvasColorPicker.selectionID
 
     emitter.emit('render')
   })
 
   emitter.on('changeColor', function ({ selectionID }) {
     state.colorPicker.selectionID = selectionID
+
+    emitter.emit('render')
+  })
+
+  emitter.on('changeCanvasColor', function ({ selectionID }) {
+    state.canvasColorPicker.selectionID = selectionID
 
     emitter.emit('render')
   })
@@ -56,7 +65,8 @@ function makeGrid (width, height) {
       column.push({
         element: '',
         styleID: 0,
-        colorID: 0
+        colorID: 0,
+        canvasColorID: lastColor
       })
     }
 

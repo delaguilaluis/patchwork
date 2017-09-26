@@ -1,3 +1,7 @@
+## 1.3.0 (2017-09-26)
+
+* Allow to change the background color
+
 ## 1.2.1 (2017-09-15)
 
 * Improve responsiveness
